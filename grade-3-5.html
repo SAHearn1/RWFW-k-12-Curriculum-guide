@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Grades 3-5 RootWork Framework Curriculum - Deepening scientific inquiry skills, exploring ecosystem relationships, and developing data-driven investigation through hands-on garden science.">
+    <title>Grades 3-5: Investigation & Connection | RootWork Framework</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .curriculum-nav {
+            background: var(--stone-100);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 80px;
+            z-index: 999;
+        }
+        
+        .curriculum-nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            gap: 1rem;
+            overflow-x: auto;
+        }
+        
+        .nav-chip {
+            padding: 0.75rem 1.5rem;
+            background: white;
+            border-radius: 50px;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .nav-chip:hover {
+            border-color: var(--emerald);
+            background: var(--emerald);
+            color: white;
+        }
+        
+        .nav-chip.active {
+            background: var(--emerald);
+            color: white;
+        }
+        
+        .content-section {
+            padding: 4rem 0;
+            border-bottom: 2px solid var(--stone-200);
+        }
+        
+        .content-section:last-of-type {
+            border-bottom: none;
+        }
+        
+        .standards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .standard-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--emerald);
+        }
+        
+        .standard-code {
+            font-family: 'Courier New', monospace;
+            color: var(--emerald);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .learning-objective {
+            background: var(--stone-50);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border-left: 4px solid var(--amber);
+        }
+        
+        .cinco-rs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .r-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .r-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--emerald), var(--forest-green));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+        
+        .generator-cta {
+            background: linear-gradient(135deg, var(--amber), #b45309);
+            padding: 3rem 2rem;
+            border-radius: 16px;
+            text-align: center;
+            margin: 4rem 0;
+            color: white;
+        }
+        
+        .generator-cta h3 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .generator-cta p {
+            color: rgba(255,255,255,0.95);
+            font-size: 1.15rem;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <span>RootWork Framework</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#overview">Overview</a></li>
+                <li><a href="index.html#generator">Lesson Generator</a></li>
+                <li><a href="index.html#grade-bands">All Grade Bands</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="curriculum-nav">
+        <div class="curriculum-nav-container">
+            <a href="#overview" class="nav-chip active">Overview</a>
+            <a href="#standards" class="nav-chip">Standards</a>
+            <a href="#5rs" class="nav-chip">The 5 Rs</a>
+            <a href="#themes" class="nav-chip">Learning Themes</a>
+            <a href="#assessment" class="nav-chip">Assessment</a>
+            <a href="#resources" class="nav-chip">Resources</a>
+        </div>
+    </div>
+
+    <header class="hero" style="padding: 4rem 2rem;">
+        <div class="hero-content">
+            <h1>Grades 3-5: Investigation & Connection</h1>
+            <p>Deepening scientific inquiry skills, exploring ecosystem relationships, and developing data-driven investigation through hands-on garden science.</p>
+            <div class="cta-buttons">
+                <a href="https://rwfw-lessonplan-generator.app/" target="_blank" class="btn btn-primary">
+                    <i class="fas fa-magic"></i> Generate 3-5 Lesson
+                </a>
+                <a href="#overview" class="btn btn-secondary">
+                    <i class="fas fa-arrow-down"></i> Explore Curriculum
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="overview" class="content-section">
+        <div class="container">
+            <h2>Developmental Overview</h2>
+            <p style="font-size: 1.15rem; max-width: 900px; margin-bottom: 2rem;">
+                Grades 3-5 students transition from simple observation to systematic investigation, exploring ecosystem relationships, conducting controlled experiments, and analyzing data to answer increasingly complex scientific questions.
+            </p>
+            
+            <div class="feature-grid">
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>Scientific Inquiry Methods</h3>
+                    <p>Students design and conduct investigations, forming testable hypotheses, collecting quantitative data, and drawing evidence-based conclusions.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Ecosystem Interdependence</h3>
+                    <p>Students explore complex relationships between organisms and their environment, understanding food webs, decomposition cycles, and nutrient flows.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Data Collection & Analysis</h3>
+                    <p>Students measure variables, record observations systematically, create graphs and charts, and interpret quantitative patterns.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3>Cultural Heritage Gardens</h3>
+                    <p>Students explore agricultural traditions from diverse cultures, connecting scientific learning to cultural identity and community wisdom.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="standards" class="content-section" style="background: var(--stone-50);">
+        <div class="container">
+            <h2>Standards Alignment</h2>
+            <p style="font-size: 1.15rem; max-width: 900px; margin-bottom: 3rem;">
+                Comprehensive alignment with NGSS, Common Core Math and ELA, and CASEL Social-Emotional Learning competencies.
+            </p>
+            
+            <h3 style="margin-top: 3rem; margin-bottom: 2rem;">NGSS Science Standards</h3>
+            <div class="standards-grid">
+
+                <div class="standard-card">
+                    <div class="standard-code">3-LS4-3</div>
+                    <p>Construct an argument with evidence that in a particular habitat some organisms can survive well, some survive less well, and some cannot survive at all.</p>
+                </div>
+
+                <div class="standard-card">
+                    <div class="standard-code">3-LS4-4</div>
+                    <p>Make a claim about the merit of a solution to a problem caused when the environment changes and affects organisms living there.</p>
+                </div>
+
+                <div class="standard-card">
+                    <div class="standard-code">4-LS1-1</div>
+                    <p>Construct an argument that plants and animals have internal and external structures that function to support survival, growth, behavior, and reproduction.</p>
+                </div>
+
+                <div class="standard-card">
+                    <div class="standard-code">4-ESS3-1</div>
+                    <p>Obtain and combine information to describe that energy and fuels are derived from natural resources and their uses affect the environment.</p>
+                </div>
+
+                <div class="standard-card">
+                    <div class="standard-code">5-LS2-1</div>
+                    <p>Develop a model to describe the movement of matter among plants, animals, decomposers, and the environment.</p>
+                </div>
+
+                <div class="standard-card">
+                    <div class="standard-code">5-ESS3-1</div>
+                    <p>Obtain and combine information about ways individual communities use science ideas to protect Earth's resources and environment.</p>
+                </div>
+
+            </div>
+            
+            <h3 style="margin-top: 3rem; margin-bottom: 2rem;">Common Core ELA Standards</h3>
+            <div class="standards-grid">
+
+                <div class="standard-card">
+                    <div class="standard-code">CCSS.ELA-LITERACY.W.3-5.2</div>
+                    <p>Write informative/explanatory texts to examine a topic and convey ideas and information clearly through well-structured garden investigations.</p>
+                </div>
+
+                <div class="standard-card">
+                    <div class="standard-code">CCSS.ELA-LITERACY.W.3-5.7</div>
+                    <p>Conduct short research projects that build knowledge through investigation of garden-based phenomena.</p>
+                </div>
+
+                <div class="standard-card">
+                    <div class="standard-code">CCSS.ELA-LITERACY.SL.3-5.1</div>
+                    <p>Engage effectively in collaborative discussions about grade-level topics, building on others' ideas during scientific discourse.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="5rs" class="content-section">
+        <div class="container">
+            <h2>The 5 Rs: Trauma-Informed Framework</h2>
+            <p style="font-size: 1.15rem; max-width: 900px; margin-bottom: 3rem;">
+                The RootWork Framework integrates SAMHSA's trauma-informed principles through five interconnected practices.
+            </p>
+            
+            <div class="cinco-rs">
+                <div class="r-card">
+                    <div class="r-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 style="color: var(--emerald);">Rooting</h3>
+                    <h4>Grounding in Evidence</h4>
+                    <p>Students ground their investigations in systematic observation and data collection, building evidence-based thinking skills.</p>
+                </div>
+                
+                <div class="r-card">
+                    <div class="r-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 style="color: var(--emerald);">Regulating</h3>
+                    <h4>Self-Management</h4>
+                    <p>Garden activities provide opportunities for stress management, mindfulness, and healthy coping strategies.</p>
+                </div>
+                
+                <div class="r-card">
+                    <div class="r-icon">
+                        <i class="fas fa-mirror"></i>
+                    </div>
+                    <h3 style="color: var(--emerald);">Reflecting</h3>
+                    <h4>Metacognition</h4>
+                    <p>Students analyze their learning processes, evaluate evidence critically, and refine their scientific thinking.</p>
+                </div>
+                
+                <div class="r-card">
+                    <div class="r-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3 style="color: var(--emerald);">Restoring</h3>
+                    <h4>Wellness Practices</h4>
+                    <p>The garden offers restorative spaces for processing, recovery, and sustainable learning practices.</p>
+                </div>
+                
+                <div class="r-card">
+                    <div class="r-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 style="color: var(--emerald);">Reconnecting</h3>
+                    <h4>Collaborative Learning</h4>
+                    <p>Shared projects build authentic community connections and develop leadership skills.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="themes" class="content-section" style="background: var(--stone-50);">
+        <div class="container">
+            <h2>Core Learning Themes</h2>
+            
+            <div style="max-width: 900px; margin: 0 auto;">
+
+                <div class="feature-card" style="margin: 2rem 0;">
+                    <h3><i class="fas fa-network-wired" style="color: var(--emerald); margin-right: 1rem;"></i>Ecosystem Connections: Food Webs in Action</h3>
+                    <p><strong>Duration:</strong> 8-10 weeks | <strong>Focus:</strong> Interdependent relationships in ecosystems</p>
+                    <p>Students investigate complex food webs in the garden ecosystem, exploring producer, consumer, and decomposer relationships. They track energy flow and material cycling through direct observation and experimentation.</p>
+                    <div class="learning-objective">
+                        <strong>Key Activities:</strong> Food web mapping, decomposition experiments, predator-prey simulations, energy pyramid construction, soil food web investigations
+                    </div>
+                </div>
+
+                <div class="feature-card" style="margin: 2rem 0;">
+                    <h3><i class="fas fa-flask" style="color: var(--emerald); margin-right: 1rem;"></i>Plant Science: Structure & Function</h3>
+                    <p><strong>Duration:</strong> 6-8 weeks | <strong>Focus:</strong> Plant anatomy and adaptations</p>
+                    <p>Students conduct systematic investigations of plant structures, exploring how roots, stems, leaves, flowers, and seeds function to support survival and reproduction. Comparative anatomy reveals adaptations to different environments.</p>
+                    <div class="learning-objective">
+                        <strong>Key Activities:</strong> Plant dissection, transpiration experiments, photosynthesis investigations, seed dispersal studies, adaptation comparisons
+                    </div>
+                </div>
+
+                <div class="feature-card" style="margin: 2rem 0;">
+                    <h3><i class="fas fa-water" style="color: var(--emerald); margin-right: 1rem;"></i>Water Cycle & Conservation</h3>
+                    <p><strong>Duration:</strong> 6-8 weeks | <strong>Focus:</strong> Water systems and stewardship</p>
+                    <p>Students explore the water cycle through garden-based observations and experiments, investigating water conservation strategies and developing solutions to water-related challenges in their school and community.</p>
+                    <div class="learning-objective">
+                        <strong>Key Activities:</strong> Water cycle models, irrigation system design, rainwater harvesting, soil water retention experiments, watershed mapping
+                    </div>
+                </div>
+
+                <div class="feature-card" style="margin: 2rem 0;">
+                    <h3><i class="fas fa-seedling" style="color: var(--emerald); margin-right: 1rem;"></i>Cultural Heritage & Agricultural Traditions</h3>
+                    <p><strong>Duration:</strong> 8-10 weeks | <strong>Focus:</strong> Cultural sustainability through agriculture</p>
+                    <p>Students research and cultivate heritage crops from diverse cultural traditions, interviewing community members and learning traditional agricultural knowledge passed down through generations.</p>
+                    <div class="learning-objective">
+                        <strong>Key Activities:</strong> Heritage crop cultivation, elder interviews, traditional farming technique research, cultural celebration events, family recipe projects
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="generator-cta">
+            <h3>Ready to Create Your Lesson?</h3>
+            <p>Use our AI-powered lesson generator to create standards-aligned, trauma-informed lessons in minutes.</p>
+            <a href="https://rwfw-lessonplan-generator.app/" target="_blank" class="btn btn-secondary">
+                <i class="fas fa-magic"></i> Generate Lesson Now
+            </a>
+        </div>
+    </div>
+
+    <section id="assessment" class="content-section">
+        <div class="container">
+            <h2>Assessment Strategies</h2>
+            <p style="font-size: 1.15rem; max-width: 900px; margin-bottom: 3rem;">
+                Comprehensive assessment approaches that honor diverse learning pathways and demonstrate growth over time.
+            </p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3><i class="fas fa-clipboard-check" style="color: var(--emerald);"></i> Performance-Based Assessment</h3>
+                    <p>Students demonstrate mastery through authentic tasks, projects, and presentations that apply learning to real-world contexts.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-folder-open" style="color: var(--emerald);"></i> Portfolio Development</h3>
+                    <p>Students curate evidence of learning across multiple domains, reflecting on growth and setting goals.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-chart-line" style="color: var(--emerald);"></i> Progress Monitoring</h3>
+                    <p>Regular formative assessments track skill development, inform instruction, and support intervention.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-users" style="color: var(--emerald);"></i> Peer & Self-Assessment</h3>
+                    <p>Students develop metacognitive skills through structured reflection and constructive peer feedback.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resources" class="content-section" style="background: var(--stone-50);">
+        <div class="container">
+            <h2>Implementation Resources</h2>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3><i class="fas fa-download" style="color: var(--emerald);"></i> Downloadable Materials</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0;">📄 Lesson plan templates</li>
+                        <li style="padding: 0.5rem 0;">📄 Assessment rubrics</li>
+                        <li style="padding: 0.5rem 0;">📄 Student worksheets</li>
+                        <li style="padding: 0.5rem 0;">📄 Family engagement resources</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-video" style="color: var(--emerald);"></i> Professional Development</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0;">🎓 90-hour training program</li>
+                        <li style="padding: 0.5rem 0;">🎓 Implementation coaching</li>
+                        <li style="padding: 0.5rem 0;">🎓 Video tutorials</li>
+                        <li style="padding: 0.5rem 0;">🎓 Teacher community forums</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-tools" style="color: var(--emerald);"></i> Garden Tools & Supplies</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0;">🔨 Equipment recommendations</li>
+                        <li style="padding: 0.5rem 0;">🔨 Seed sourcing guides</li>
+                        <li style="padding: 0.5rem 0;">🔨 Budget planning templates</li>
+                        <li style="padding: 0.5rem 0;">🔨 Safety protocols</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-book" style="color: var(--emerald);"></i> Recommended Resources</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0;">📚 Research articles</li>
+                        <li style="padding: 0.5rem 0;">📚 Professional books</li>
+                        <li style="padding: 0.5rem 0;">📚 Online communities</li>
+                        <li style="padding: 0.5rem 0;">📚 Partner organizations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>RootWork Framework</h4>
+                <p>K-12 trauma-informed STEAM curriculum through therapeutic horticulture.</p>
+                <p style="margin-top: 1.5rem;">
+                    <strong>Dr. Shawn Hearn, Ed.D., J.D.</strong><br>
+                    Community Exceptional Children's Services
+                </p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Grade Bands</h4>
+                <ul>
+                    <li><a href="grade-k-2.html">Grades K-2</a></li>
+                    <li><a href="grade-3-5.html">Grades 3-5</a></li>
+                    <li><a href="grade-6-8.html">Grades 6-8</a></li>
+                    <li><a href="grade-9-12.html">Grades 9-12</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="https://rwfw-lessonplan-generator.app/" target="_blank">Lesson Generator</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>
+                    <i class="fas fa-envelope"></i> hearn.sa@gmail.com<br>
+                    <i class="fas fa-map-marker-alt"></i> Savannah, Georgia
+                </p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Dr. Shawn Hearn / CECS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        const sections = document.querySelectorAll('.content-section');
+        const navChips = document.querySelectorAll('.nav-chip');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navChips.forEach(chip => {
+                chip.classList.remove('active');
+                if (chip.getAttribute('href') === `#${current}`) {
+                    chip.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
