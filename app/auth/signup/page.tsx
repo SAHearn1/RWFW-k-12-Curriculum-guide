@@ -52,10 +52,10 @@ export default function SignUp() {
         // Show verification URL in development
         if (data.verificationUrl) {
           setVerificationUrl(data.verificationUrl)
+        } else {
+          // In production, redirect with success message
+          router.push("/auth/signin?message=AccountCreated")
         }
-        // In production, show success message
-        alert("Account created successfully! Please check your email to verify your account.")
-        router.push("/auth/signin")
       }
     } catch (error) {
       setError("An error occurred during registration")

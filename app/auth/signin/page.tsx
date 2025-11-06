@@ -17,9 +17,14 @@ function SignInForm() {
   useEffect(() => {
     const verified = searchParams.get("verified")
     const errorParam = searchParams.get("error")
+    const messageParam = searchParams.get("message")
     
     if (verified === "true") {
       setMessage("Email verified successfully! You can now sign in.")
+    }
+    
+    if (messageParam === "AccountCreated") {
+      setMessage("Account created successfully! Please check your email to verify your account before signing in.")
     }
     
     if (errorParam) {
@@ -45,6 +50,12 @@ function SignInForm() {
 
       if (result?.error) {
         setError(result.error)
+        // If error is about email verification, provide helpful message
+        if (result.error.includes("verify your email")) {
+          setError(
+            result.error + " Need to resend verification email? Contact support at hearn.sa@gmail.com"
+          )
+        }
       } else {
         router.push("/dashboard")
       }
