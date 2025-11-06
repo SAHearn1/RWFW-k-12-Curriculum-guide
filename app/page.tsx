@@ -1,9 +1,8 @@
 import Link from "next/link"
-import { getServerSession } from "next-auth"
-import { authOptions } from "@/lib/auth"
+import { auth } from "@/lib/auth"
 
 export default async function Home() {
-  const session = await getServerSession(authOptions)
+  const session = await auth()
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-amber-50">
