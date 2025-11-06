@@ -32,6 +32,24 @@ A comprehensive K-12 curriculum web application integrating trauma-informed care
 
 ### Installation
 
+#### Quick Start (with Vercel CLI)
+
+```bash
+# 1. Pull environment variables
+vercel env pull .env.development.local
+
+# 2. Install dependencies
+npm install
+
+# 3. Run database migration
+npx prisma migrate dev --name init
+
+# 4. Start development
+npm run dev
+```
+
+#### Manual Setup (without Vercel CLI)
+
 1. **Clone the repository**
    ```bash
    git clone https://github.com/SAHearn1/RWFW-k-12-Curriculum-guide.git

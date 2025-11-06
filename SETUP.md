@@ -9,6 +9,10 @@ This is a Next.js 16 application with authentication, protected routes, and Pris
 - Node.js 18.x or higher
 - npm or yarn
 - PostgreSQL database (Vercel Postgres provided)
+- Vercel CLI (optional, but recommended for Vercel deployments):
+  ```bash
+  npm install -g vercel
+  ```
 
 ## Environment Variables
 
@@ -35,19 +39,50 @@ openssl rand -base64 32
 
 ## Installation
 
+### Option 1: Using Vercel CLI (Recommended for Vercel deployments)
+
+1. Pull environment variables from Vercel:
+```bash
+vercel env pull .env.development.local
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Run database migration:
+```bash
+npx prisma migrate dev --name init
+```
+
+4. Start development server:
+```bash
+npm run dev
+```
+
+### Option 2: Manual Setup (Without Vercel CLI)
+
 1. Install dependencies:
 ```bash
 npm install
 ```
 
-2. Generate Prisma Client:
+2. Create `.env.local` file with environment variables (see Environment Variables section above)
+
+3. Generate Prisma Client:
 ```bash
 npx prisma generate
 ```
 
-3. Push the database schema (when database is accessible):
+4. Push the database schema (when database is accessible):
 ```bash
 npx prisma db push
+```
+
+5. Start development server:
+```bash
+npm run dev
 ```
 
 ## Database Schema
