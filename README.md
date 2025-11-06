@@ -1,130 +1,189 @@
-# RootWork Framework K-12 Curriculum Website
+# RootWork Framework K-12 Curriculum
 
-## Production-Ready HTML Curriculum Site
+A comprehensive K-12 curriculum web application integrating trauma-informed care, therapeutic horticulture, and rigorous STEAM education for healing and academic excellence.
 
-This is a comprehensive, professional HTML website for the RootWork Framework K-12 Curriculum, featuring trauma-informed STEAM education through therapeutic horticulture.
+## 🌟 Features
 
-## Files Included
+### Authentication System
+- **User Registration**: Sign up with email and password
+- **Email Verification**: Secure account verification via email token
+- **Password Security**: Bcrypt hashing with secure storage
+- **Session Management**: JWT-based authentication with NextAuth.js
+- **Protected Routes**: Curriculum content requires authentication
 
-### Core Files
-- **index.html** - Main homepage with overview, features, and navigation
-- **styles.css** - Complete brand styling with RootWork colors and typography
-- **script.js** - Interactive features and smooth scrolling
+### Curriculum Content
+- **Grades K-2**: Wonder & Discovery
+- **Grades 3-5**: Investigation & Connection
+- **Grades 6-8**: Systems & Leadership
+- **Grades 9-12**: Impact & Innovation
 
-### Grade Band Pages
-- **grade-k-2.html** - Grades K-2: Wonder & Discovery
-- **grade-3-5.html** - Grades 3-5: Investigation & Connection
-- **grade-6-8.html** - Grades 6-8: Systems & Leadership
-- **grade-9-12.html** - Grades 9-12: Impact & Innovation
+### User Features
+- **Landing Page**: Public overview with sign-in/sign-up options
+- **User Dashboard**: Personalized dashboard with curriculum access
+- **Profile Management**: View account information
+- **Sign Out**: Secure session termination
 
-## Brand Integration
+## 🚀 Quick Start
 
-### Colors
-- **Emerald**: #047857 (primary)
-- **Forest Green**: #065F46 (secondary)
-- **Amber**: #D97706 (CTAs)
-- **Gold Leaf**: #D4C862 (accents)
-- **Evergreen**: #082A19 (headings)
+### Prerequisites
+- Node.js 18.x or higher
+- npm or yarn
+- PostgreSQL database (Vercel Postgres provided)
 
-### Typography
-- **Headings**: Manrope (Google Fonts)
-- **Body**: Inter (Google Fonts)
-- **Quotes**: Libre Baskerville (Google Fonts)
+### Installation
 
-## Features
+#### Quick Start (with Vercel CLI)
 
-✅ **Fully Responsive** - Mobile, tablet, and desktop optimized
-✅ **Standards-Aligned** - NGSS, Common Core, CASEL integration
-✅ **Trauma-Informed** - The 5 Rs framework throughout
-✅ **AI Integration** - Links to lesson plan generator
-✅ **Professional Design** - Publication-grade quality
-✅ **Accessibility** - WCAG compliant structure
-✅ **SEO Optimized** - Meta tags and semantic HTML
-✅ **Print-Friendly** - CSS print styles included
+```bash
+# 1. Pull environment variables
+vercel env pull .env.development.local
 
-## Deployment Instructions
+# 2. Install dependencies
+npm install
 
-### Option 1: Simple Web Hosting
-1. Upload all files to your web host via FTP/SFTP
-2. Ensure file permissions are set correctly (644 for files, 755 for directories)
-3. Access via your domain (e.g., rootworkframework.com)
+# 3. Run database migration
+npx prisma migrate dev --name init
 
-### Option 2: GitHub Pages (Free)
-1. Create a new GitHub repository
-2. Upload all files to the main branch
-3. Enable GitHub Pages in repository settings
-4. Access via username.github.io/repository-name
+# 4. Start development
+npm run dev
+```
 
-### Option 3: Netlify/Vercel (Free with Custom Domain)
-1. Drag and drop the entire folder to Netlify or Vercel
-2. Configure custom domain in settings
-3. Automatic HTTPS and global CDN included
+#### Manual Setup (without Vercel CLI)
 
-### Option 4: Local Testing
-1. Open index.html in any modern web browser
-2. All features work locally except external links
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/SAHearn1/RWFW-k-12-Curriculum-guide.git
+   cd RWFW-k-12-Curriculum-guide
+   ```
 
-## Cognia Conference Package
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-For the conference, you can:
-1. **Present live** - Open index.html in presentation mode
-2. **Share USB** - Copy entire folder to USB drives
-3. **Print materials** - Use browser print (Ctrl/Cmd + P) for handouts
-4. **QR Codes** - Generate QR codes linking to hosted site
+3. **Set up environment variables**
+   
+   Create a `.env.local` file in the root directory:
+   ```env
+   DATABASE_URL="your-postgres-connection-string"
+   NEXTAUTH_SECRET="your-secure-secret-key"
+   NEXTAUTH_URL="http://localhost:3000"
+   EMAIL_FROM="noreply@rootworkframework.com"
+   ```
 
-## Customization
+4. **Initialize the database**
+   ```bash
+   npx prisma generate
+   npx prisma db push
+   ```
 
-### Update Lesson Generator URL
-Find and replace `https://rwfw-lessonplan-generator.app/` with your URL in:
-- index.html
-- grade-k-2.html
-- grade-3-5.html
-- grade-6-8.html
-- grade-9-12.html
+5. **Run the development server**
+   ```bash
+   npm run dev
+   ```
 
-### Add Logo
-Replace the Font Awesome seedling icon with your logo:
-1. Add logo image to folder
-2. Update `.logo-icon` in each HTML file
-3. Adjust CSS in styles.css as needed
+6. **Open your browser**
+   
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-### Modify Content
-- All content is in standard HTML
-- No build process required
-- Edit directly in any text editor
-- Changes take effect immediately
+## 📚 Documentation
 
-## Browser Compatibility
+For detailed setup instructions, deployment guides, and troubleshooting, see [SETUP.md](./SETUP.md).
 
-✅ Chrome/Edge (version 90+)
-✅ Firefox (version 88+)
-✅ Safari (version 14+)
-✅ Mobile browsers (iOS Safari, Chrome Mobile)
+## 🏗️ Tech Stack
 
-## Performance
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Authentication**: NextAuth.js v5
+- **Database**: PostgreSQL (Vercel Postgres)
+- **ORM**: Prisma
+- **Password Hashing**: bcryptjs
+- **Deployment**: Vercel
 
-- **Load Time**: < 2 seconds on average connection
-- **Page Size**: ~30KB per page (excluding images)
-- **External Dependencies**: Google Fonts, Font Awesome CDN
-- **Lighthouse Score**: 95+ (Performance, Accessibility, Best Practices, SEO)
+## 📂 Project Structure
 
-## Support & Contact
+```
+├── app/
+│   ├── api/                    # API routes
+│   │   ├── auth/              # NextAuth endpoints
+│   │   ├── register/          # User registration
+│   │   └── verify/            # Email verification
+│   ├── auth/                  # Authentication pages
+│   │   ├── signin/            # Sign-in page
+│   │   └── signup/            # Sign-up page
+│   ├── dashboard/             # User dashboard
+│   ├── grade-k-2/             # K-2 curriculum
+│   ├── grade-3-5/             # 3-5 curriculum
+│   ├── grade-6-8/             # 6-8 curriculum
+│   ├── grade-9-12/            # 9-12 curriculum
+│   ├── layout.tsx             # Root layout
+│   └── page.tsx               # Landing page
+├── components/                # Reusable components
+├── lib/                       # Utility functions
+│   ├── auth.ts               # Auth configuration
+│   └── prisma.ts             # Prisma client
+├── prisma/                    # Database schema
+│   └── schema.prisma         # User model
+├── middleware.ts              # Route protection
+└── public/                    # Static assets
+```
 
-**Dr. Shawn Hearn, Ed.D., J.D.**
-Community Exceptional Children's Services
-Email: hearn.sa@gmail.com
-Location: Savannah, Georgia
+## 🔐 Security
 
-## License
+- Passwords are hashed using bcrypt with a cost factor of 10
+- JWT-based sessions with secure httpOnly cookies
+- Email verification required before accessing curriculum
+- Protected routes with middleware authentication
+- Environment variables for sensitive data
+- SQL injection protection via Prisma ORM
 
-© 2025 Dr. Shawn Hearn / Community Exceptional Children's Services
-All rights reserved.
+## 🎨 Design Philosophy
 
-## Version
+The application follows the **5 Rs Framework** of trauma-informed care:
+1. **Rooting**: Establishing safety and grounding
+2. **Regulating**: Emotional regulation support
+3. **Reflecting**: Metacognitive awareness
+4. **Restoring**: Healing and recovery
+5. **Reconnecting**: Building community connections
 
-Version 1.0 - November 2025
-Production-Ready Release
+## 📖 About the RootWork Framework
+
+Developed by **Dr. Shawn Hearn, Ed.D., J.D.**, the RootWork Framework represents a paradigm shift in education, seamlessly integrating therapeutic horticulture, trauma-informed pedagogy, and rigorous academic standards.
+
+### Credentials
+- Ed.D. in Educational Administration & Leadership
+- J.D. from Southern University Law Center
+- EBD Endorsement in Special Education
+- 20+ Years Military Service
+
+### Organization
+Founder & Executive Director  
+Community Exceptional Children's Services (CECS)  
+Savannah High School Educator
+
+## 🤝 Contributing
+
+This is a production application. For feature requests or bug reports, please contact the project maintainer.
+
+## 📝 License
+
+© 2025 Dr. Shawn Hearn / Community Exceptional Children's Services. All rights reserved.
+
+## 📧 Contact
+
+**Dr. Shawn Hearn**  
+Email: hearn.sa@gmail.com  
+Location: Savannah, Georgia  
+Organization: Community Exceptional Children's Services
+
+## 🔗 Resources
+
+- [AI Lesson Plan Generator](https://rwfw-lessonplan-generator.app/)
+- [Next.js Documentation](https://nextjs.org/docs)
+- [NextAuth.js Documentation](https://next-auth.js.org/)
+- [Prisma Documentation](https://www.prisma.io/docs/)
 
 ---
 
-**Ready for Cognia Conference and Public Deployment**
+**RootWork Framework K-12 Curriculum | From Garden to Growth**
