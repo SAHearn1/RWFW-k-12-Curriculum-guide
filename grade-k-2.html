@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Grades K-2 RootWork Framework Curriculum - Wonder & Discovery through Therapeutic Horticulture">
+    <title>Grades K-2: Wonder & Discovery | RootWork Framework</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .curriculum-nav {
+            background: var(--stone-100);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 80px;
+            z-index: 999;
+        }
+        
+        .curriculum-nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            gap: 1rem;
+            overflow-x: auto;
+        }
+        
+        .nav-chip {
+            padding: 0.75rem 1.5rem;
+            background: white;
+            border-radius: 50px;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .nav-chip:hover {
+            border-color: var(--emerald);
+            background: var(--emerald);
+            color: white;
+        }
+        
+        .nav-chip.active {
+            background: var(--emerald);
+            color: white;
+        }
+        
+        .content-section {
+            padding: 4rem 0;
+            border-bottom: 2px solid var(--stone-200);
+        }
+        
+        .content-section:last-of-type {
+            border-bottom: none;
+        }
+        
+        .standards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .standard-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--emerald);
+        }
+        
+        .standard-code {
+            font-family: 'Courier New', monospace;
+            color: var(--emerald);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .learning-objective {
+            background: var(--stone-50);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border-left: 4px solid var(--amber);
+        }
+        
+        .cinco-rs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .r-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .r-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--emerald), var(--forest-green));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+        
+        .generator-cta {
+            background: linear-gradient(135deg, var(--amber), #b45309);
+            padding: 3rem 2rem;
+            border-radius: 16px;
+            text-align: center;
+            margin: 4rem 0;
+            color: white;
+        }
+        
+        .generator-cta h3 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .generator-cta p {
+            color: rgba(255,255,255,0.95);
+            font-size: 1.15rem;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <span>RootWork Framework</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#overview">Overview</a></li>
+                <li><a href="index.html#generator">Lesson Generator</a></li>
+                <li><a href="index.html#grade-bands">All Grade Bands</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Curriculum Navigation -->
+    <div class="curriculum-nav">
+        <div class="curriculum-nav-container">
+            <a href="#overview" class="nav-chip active">Overview</a>
+            <a href="#standards" class="nav-chip">Standards</a>
+            <a href="#5rs" class="nav-chip">The 5 Rs</a>
+            <a href="#themes" class="nav-chip">Learning Themes</a>
+            <a href="#assessment" class="nav-chip">Assessment</a>
+            <a href="#resources" class="nav-chip">Resources</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero" style="padding: 4rem 2rem;">
+        <div class="hero-content">
+            <h1>Grades K-2: Wonder & Discovery</h1>
+            <p>Building foundational skills through sensory exploration, emotional regulation, and joyful discovery in the garden.</p>
+            <div class="cta-buttons">
+                <a href="https://rwfw-lessonplan-generator.app/" target="_blank" class="btn btn-primary">
+                    <i class="fas fa-magic"></i> Generate K-2 Lesson
+                </a>
+                <a href="#overview" class="btn btn-secondary">
+                    <i class="fas fa-arrow-down"></i> Explore Curriculum
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Overview Section -->
+    <section id="overview" class="content-section">
+        <div class="container">
+            <h2>Developmental Overview</h2>
+            <p style="font-size: 1.15rem; max-width: 900px; margin-bottom: 2rem;">
+                The K-2 RootWork Framework centers on <strong>wonder and discovery</strong>, recognizing that young learners are naturally curious explorers. Through hands-on garden experiences, students develop foundational skills in observation, emotional regulation, and collaborative learning while building essential academic competencies.
+            </p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Sensory Exploration</h3>
+                    <p>Students engage all five senses to observe and describe plants, soil, weather, and seasonal changes, building vocabulary and descriptive language skills.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Emotional Regulation</h3>
+                    <p>Through garden-based mindfulness activities and community circle practices, students develop foundational self-regulation and social-emotional skills.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Life Cycles & Patterns</h3>
+                    <p>Students observe and document plant growth, seasonal patterns, and basic life cycles, developing scientific thinking and mathematical pattern recognition.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community Building</h3>
+                    <p>Garden work becomes a shared experience where students learn cooperation, responsibility, and respect for living things and each other.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Standards Section -->
+    <section id="standards" class="content-section" style="background: var(--stone-50);">
+        <div class="container">
+            <h2>Standards Alignment</h2>
+            <p style="font-size: 1.15rem; max-width: 900px; margin-bottom: 3rem;">
+                K-2 curriculum is comprehensively aligned with Next Generation Science Standards (NGSS), Common Core Math and ELA, and CASEL Social-Emotional Learning competencies.
+            </p>
+            
+            <h3 style="margin-top: 3rem; margin-bottom: 2rem;">NGSS Science Standards</h3>
+            <div class="standards-grid">
+                <div class="standard-card">
+                    <div class="standard-code">K-LS1-1</div>
+                    <p>Use observations to describe patterns of what plants and animals (including humans) need to survive.</p>
+                </div>
+                
+                <div class="standard-card">
+                    <div class="standard-code">K-ESS2-1</div>
+                    <p>Use and share observations of local weather conditions to describe patterns over time.</p>
+                </div>
+                
+                <div class="standard-card">
+                    <div class="standard-code">K-ESS3-1</div>
+                    <p>Use a model to represent the relationship between the needs of different plants or animals and the places they live.</p>
+                </div>
+                
+                <div class="standard-card">
+                    <div class="standard-code">1-LS1-1</div>
+                    <p>Use materials to design solutions to human problems by mimicking how plants and/or animals use their external parts to help them survive.</p>
+                </div>
+                
+                <div class="standard-card">
+                    <div class="standard-code">1-LS3-1</div>
+                    <p>Make observations to construct an evidence-based account that young plants and animals are like, but not exactly like, their parents.</p>
+                </div>
+                
+                <div class="standard-card">
+                    <div class="standard-code">2-LS2-1</div>
+                    <p>Plan and conduct an investigation to determine if plants need sunlight and water to grow.</p>
+                </div>
+            </div>
+            
+            <h3 style="margin-top: 3rem; margin-bottom: 2rem;">Common Core ELA Standards</h3>
+            <div class="standards-grid">
+                <div class="standard-card">
+                    <div class="standard-code">CCSS.ELA-LITERACY.W.K-2.2</div>
+                    <p>Write informative/explanatory texts to examine and convey information about the garden and natural world.</p>
+                </div>
+                
+                <div class="standard-card">
+                    <div class="standard-code">CCSS.ELA-LITERACY.SL.K-2.1</div>
+                    <p>Participate in collaborative conversations about grade-level topics with diverse partners during community circles.</p>
+                </div>
+                
+                <div class="standard-card">
+                    <div class="standard-code">CCSS.ELA-LITERACY.L.K-2.5</div>
+                    <p>Demonstrate understanding of word relationships and nuances in word meanings related to nature and plants.</p>
+                </div>
+            </div>
+            
+            <h3 style="margin-top: 3rem; margin-bottom: 2rem;">CASEL Social-Emotional Learning</h3>
+            <div class="standards-grid">
+                <div class="standard-card">
+                    <div class="standard-code">Self-Awareness</div>
+                    <p>Students identify and express emotions experienced in the garden, developing vocabulary for feelings and bodily sensations.</p>
+                </div>
+                
+                <div class="standard-card">
+                    <div class="standard-code">Self-Management</div>
+                    <p>Students practice calming strategies during garden time, learning to regulate emotions through nature connection.</p>
+                </div>
+                
+                <div class="standard-card">
+                    <div class="standard-code">Social Awareness</div>
+                    <p>Students demonstrate respect for living things and develop empathy through caring for plants and garden creatures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The 5 Rs Section -->
+    <section id="5rs" class="content-section">
+        <div class="container">
+            <h2>The 5 Rs: Trauma-Informed Framework for K-2</h2>
+            <p style="font-size: 1.15rem; max-width: 900px; margin-bottom: 3rem;">
+                The RootWork Framework integrates SAMHSA's trauma-informed principles through five interconnected practices, adapted developmentally for early elementary learners.
+            </p>
+            
+            <div class="cinco-rs">
+                <div class="r-card">
+                    <div class="r-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 style="color: var(--emerald);">Rooting</h3>
+                    <h4>Grounding in Observation</h4>
+                    <p>Students use all five senses to observe the garden, developing present-moment awareness and scientific observation skills.</p>
+                    <div class="learning-objective">
+                        <strong>K-2 Practice:</strong> "I notice..." sentence stems, sensory exploration stations, nature journaling with drawings and simple words.
+                    </div>
+                </div>
+                
+                <div class="r-card">
+                    <div class="r-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 style="color: var(--emerald);">Regulating</h3>
+                    <h4>Emotional & Physical Regulation</h4>
+                    <p>Garden activities provide natural opportunities for movement, sensory input, and calming strategies that support self-regulation.</p>
+                    <div class="learning-objective">
+                        <strong>K-2 Practice:</strong> Deep breathing with flowers, mindful walking on garden paths, "zones of regulation" check-ins using garden visuals.
+                    </div>
+                </div>
+                
+                <div class="r-card">
+                    <div class="r-icon">
+                        <i class="fas fa-mirror"></i>
+                    </div>
+                    <h3 style="color: var(--emerald);">Reflecting</h3>
+                    <h4>Thinking About Learning</h4>
+                    <p>Students share observations and wonderings, developing metacognitive awareness and scientific questioning skills.</p>
+                    <div class="learning-objective">
+                        <strong>K-2 Practice:</strong> "I wonder..." questions, turn-and-talk partnerships, simple exit tickets with pictures and words.
+                    </div>
+                </div>
+                
+                <div class="r-card">
+                    <div class="r-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3 style="color: var(--emerald);">Restoring</h3>
+                    <h4>Rest & Recovery</h4>
+                    <p>The garden provides natural spaces for rest, recovery, and sensory breaks, supporting students' physical and emotional needs.</p>
+                    <div class="learning-objective">
+                        <strong>K-2 Practice:</strong> "Garden rest spots," quiet observation time, gentle stretching activities modeled after plants growing.
+                    </div>
+                </div>
+                
+                <div class="r-card">
+                    <div class="r-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 style="color: var(--emerald);">Reconnecting</h3>
+                    <h4>Building Community</h4>
+                    <p>Shared garden work creates authentic opportunities for cooperation, communication, and building positive relationships.</p>
+                    <div class="learning-objective">
+                        <strong>K-2 Practice:</strong> Partner planting activities, community circle sharing, celebrating growth together.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Themes Section -->
+    <section id="themes" class="content-section" style="background: var(--stone-50);">
+        <div class="container">
+            <h2>Core Learning Themes</h2>
+            
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div class="feature-card" style="margin: 2rem 0;">
+                    <h3><i class="fas fa-seedling" style="color: var(--emerald); margin-right: 1rem;"></i>What Do Plants Need?</h3>
+                    <p><strong>Duration:</strong> 6-8 weeks | <strong>Science Focus:</strong> Basic needs of living things</p>
+                    <p>Students investigate what plants need to survive through hands-on experiments with water, sunlight, and soil. They document observations using drawings, photos, and emergent writing.</p>
+                    <div class="learning-objective">
+                        <strong>Key Activities:</strong> Seed planting experiments, sunlight comparison studies, water measurement practice, plant growth journals
+                    </div>
+                </div>
+                
+                <div class="feature-card" style="margin: 2rem 0;">
+                    <h3><i class="fas fa-cloud-sun" style="color: var(--emerald); margin-right: 1rem;"></i>Seasons in Our Garden</h3>
+                    <p><strong>Duration:</strong> Full year integration | <strong>Science Focus:</strong> Seasonal patterns and weather</p>
+                    <p>Students observe and document seasonal changes in the garden, developing understanding of weather patterns, plant life cycles, and seasonal rhythms.</p>
+                    <div class="learning-objective">
+                        <strong>Key Activities:</strong> Seasonal observation journals, weather pattern tracking, seasonal planting calendar, life cycle observations
+                    </div>
+                </div>
+                
+                <div class="feature-card" style="margin: 2rem 0;">
+                    <h3><i class="fas fa-search" style="color: var(--emerald); margin-right: 1rem;"></i>Garden Detectives: Observation Skills</h3>
+                    <p><strong>Duration:</strong> 4-6 weeks | <strong>Science Focus:</strong> Scientific observation and inquiry</p>
+                    <p>Students develop systematic observation skills using all five senses, learning to describe, compare, and classify plants, insects, and garden features.</p>
+                    <div class="learning-objective">
+                        <strong>Key Activities:</strong> Sensory exploration stations, observation journals, classification games, descriptive writing practice
+                    </div>
+                </div>
+                
+                <div class="feature-card" style="margin: 2rem 0;">
+                    <h3><i class="fas fa-leaf" style="color: var(--emerald); margin-right: 1rem;"></i>From Seed to Plant</h3>
+                    <p><strong>Duration:</strong> 8-10 weeks | <strong>Science Focus:</strong> Life cycles and plant growth</p>
+                    <p>Students observe complete plant life cycles from seed germination through flowering and seed production, developing understanding of growth, change, and life patterns.</p>
+                    <div class="learning-objective">
+                        <strong>Key Activities:</strong> Seed dissection, germination observations, growth measurement, life cycle sequencing, plant anatomy exploration
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Assessment Section -->
+    <section id="assessment" class="content-section">
+        <div class="container">
+            <h2>Developmentally Appropriate Assessment</h2>
+            <p style="font-size: 1.15rem; max-width: 900px; margin-bottom: 3rem;">
+                K-2 assessment emphasizes observation, documentation, and celebration of growth rather than traditional testing, honoring young learners' development.
+            </p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3><i class="fas fa-book-open" style="color: var(--emerald);"></i> Nature Journals</h3>
+                    <p>Students document observations through drawings, emergent writing, photos, and labeled diagrams, showing growth in scientific observation and literacy skills.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-comments" style="color: var(--emerald);"></i> Community Circle Sharing</h3>
+                    <p>Regular opportunities to share observations, questions, and discoveries assess oral language development and scientific thinking.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-camera" style="color: var(--emerald);"></i> Photo Documentation</h3>
+                    <p>Teacher-captured photos document student engagement, skill development, and growth over time, supporting portfolio assessment.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-clipboard-check" style="color: var(--emerald);"></i> Observation Checklists</h3>
+                    <p>Teachers use developmentally appropriate checklists to track skill progression in areas like observation, inquiry, and cooperation.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-chart-line" style="color: var(--emerald);"></i> Growth Over Time</h3>
+                    <p>Portfolio assessment tracks individual student growth across the year, celebrating progress in academic and social-emotional domains.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-users" style="color: var(--emerald);"></i> Family Engagement</h3>
+                    <p>Take-home activities and family garden events provide additional assessment data while building home-school connections.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lesson Generator CTA -->
+    <div class="container">
+        <div class="generator-cta">
+            <h3>Ready to Create Your K-2 Lesson?</h3>
+            <p>Use our AI-powered lesson generator to create standards-aligned, trauma-informed lessons for your K-2 students in minutes.</p>
+            <a href="https://rwfw-lessonplan-generator.app/" target="_blank" class="btn btn-secondary">
+                <i class="fas fa-magic"></i> Generate K-2 Lesson Now
+            </a>
+        </div>
+    </div>
+
+    <!-- Resources Section -->
+    <section id="resources" class="content-section" style="background: var(--stone-50);">
+        <div class="container">
+            <h2>Implementation Resources</h2>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3><i class="fas fa-download" style="color: var(--emerald);"></i> Downloadable Materials</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0;">📄 Observation journal templates</li>
+                        <li style="padding: 0.5rem 0;">📄 Family engagement letters</li>
+                        <li style="padding: 0.5rem 0;">📄 Vocabulary word cards</li>
+                        <li style="padding: 0.5rem 0;">📄 Assessment checklists</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-book" style="color: var(--emerald);"></i> Recommended Books</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0;">📚 "The Tiny Seed" by Eric Carle</li>
+                        <li style="padding: 0.5rem 0;">📚 "Planting a Rainbow" by Lois Ehlert</li>
+                        <li style="padding: 0.5rem 0;">📚 "From Seed to Plant" by Gail Gibbons</li>
+                        <li style="padding: 0.5rem 0;">📚 "Up in the Garden, Down in the Dirt"</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-tools" style="color: var(--emerald);"></i> Essential Garden Tools</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0;">🔨 Child-sized garden tools</li>
+                        <li style="padding: 0.5rem 0;">🔨 Magnifying glasses</li>
+                        <li style="padding: 0.5rem 0;">🔨 Watering cans</li>
+                        <li style="padding: 0.5rem 0;">🔨 Seeds and seedlings</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-video" style="color: var(--emerald);"></i> Professional Development</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0;">🎓 90-hour training program</li>
+                        <li style="padding: 0.5rem 0;">🎓 Implementation coaching</li>
+                        <li style="padding: 0.5rem 0;">🎓 Video tutorials</li>
+                        <li style="padding: 0.5rem 0;">🎓 Teacher community forums</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>RootWork Framework</h4>
+                <p>K-12 trauma-informed STEAM curriculum through therapeutic horticulture.</p>
+                <p style="margin-top: 1.5rem;">
+                    <strong>Dr. Shawn Hearn, Ed.D., J.D.</strong><br>
+                    Community Exceptional Children's Services
+                </p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Grade Bands</h4>
+                <ul>
+                    <li><a href="grade-k-2.html">Grades K-2</a></li>
+                    <li><a href="grade-3-5.html">Grades 3-5</a></li>
+                    <li><a href="grade-6-8.html">Grades 6-8</a></li>
+                    <li><a href="grade-9-12.html">Grades 9-12</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="https://rwfw-lessonplan-generator.app/" target="_blank">Lesson Generator</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>
+                    <i class="fas fa-envelope"></i> hearn.sa@gmail.com<br>
+                    <i class="fas fa-map-marker-alt"></i> Savannah, Georgia
+                </p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Dr. Shawn Hearn / CECS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Update active navigation chip on scroll
+        const sections = document.querySelectorAll('.content-section');
+        const navChips = document.querySelectorAll('.nav-chip');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navChips.forEach(chip => {
+                chip.classList.remove('active');
+                if (chip.getAttribute('href') === `#${current}`) {
+                    chip.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
