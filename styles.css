@@ -89,16 +89,13 @@ nav {
     color: var(--evergreen);
 }
 
-.logo-icon {
-    width: 50px;
-    height: 50px;
-    background: var(--emerald);
+.logo-image {
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.75rem;
+    object-fit: cover;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    background: white;
 }
 
 .nav-links {

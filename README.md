@@ -82,11 +82,11 @@ Find and replace `https://rwfw-lessonplan-generator.app/` with your URL in:
 - grade-6-8.html
 - grade-9-12.html
 
-### Add Logo
-Replace the Font Awesome seedling icon with your logo:
-1. Add logo image to folder
-2. Update `.logo-icon` in each HTML file
-3. Adjust CSS in styles.css as needed
+### Update Logo
+The site now uses the branded `assets/rootwork-logo.svg` in every navigation bar. To swap in a different logo:
+1. Replace `assets/rootwork-logo.svg` with your image (SVG or PNG recommended)
+2. Keep the file name the same or update the `logo-image` references in each HTML file
+3. Adjust the `.logo-image` styles in styles.css if you need different sizing
 
 ### Modify Content
 - All content is in standard HTML

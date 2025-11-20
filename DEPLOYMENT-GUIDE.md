@@ -191,9 +191,9 @@ Each page includes:
 ## 💡 Customization Tips
 
 ### Add Your Logo:
-1. Save logo as `logo.png` in folder
-2. In each HTML file, find: `<div class="logo-icon">`
-3. Replace with: `<img src="logo.png" alt="RootWork Logo">`
+1. Replace `assets/rootwork-logo.svg` with your preferred image (SVG/PNG)
+2. Keep the file name consistent or update the `logo-image` references in each HTML file
+3. Tweak `.logo-image` styles in styles.css for custom sizing or borders
 
 ### Update Contact Info:
 - Search for: "hearn.sa@gmail.com"

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">RootWork Framework Logo</title>
+  <desc id="desc">Circular emblem with golden academic and science icons surrounding a sprouting plant on a deep green field.</desc>
+  <circle cx="256" cy="256" r="248" fill="#0c3b23"/>
+  <g fill="none" stroke="#d9b85c" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M256 180c-12 24-12 52 0 80 12-28 12-56 0-80z"/>
+    <path d="M256 258c-24 22-30 44-30 64 18 0 30-8 30-8s12 8 30 8c0-20-6-42-30-64z"/>
+    <path d="M200 232c-34 18-64 26-100 28 24 10 50 10 74 4"/>
+    <path d="M312 232c34 18 64 26 100 28-24 10-50 10-74 4"/>
+    <path d="M144 172v82"/>
+    <path d="M112 204h64"/>
+    <path d="M128 204l-24 44h64l-24-44"/>
+    <path d="M368 172v82"/>
+    <path d="M336 204h64"/>
+    <path d="M352 204v54c12-10 26-16 40-18v-36h-56z"/>
+    <path d="M256 132v28"/>
+    <path d="M234 160h44"/>
+    <path d="M178 114c18-16 46-26 78-26s60 10 78 26"/>
+    <path d="M178 398c-26-4-54-22-64-46"/>
+    <path d="M334 398c26-4 54-22 64-46"/>
+    <path d="M126 344c-10-6-18-16-22-26"/>
+    <path d="M386 344c10-6 18-16 22-26"/>
+    <path d="M224 328c-6-20-24-34-46-34-26 0-48 22-48 48 0 8 2 16 6 22"/>
+    <path d="M196 350c-6-10-18-16-30-16-6 0-12 2-18 4"/>
+    <path d="M288 328c6-20 24-34 46-34 26 0 48 22 48 48 0 8-2 16-6 22"/>
+    <path d="M316 350c6-10 18-16 30-16 6 0 12 2 18 4"/>
+    <path d="M176 158h-24c-4 0-8 4-8 8v16h32c4 0 8-4 8-8v-8c0-4-4-8-8-8z"/>
+    <path d="M360 158h24c4 0 8 4 8 8v16h-32c-4 0-8-4-8-8v-8c0-4 4-8 8-8z"/>
+    <path d="M256 298v44"/>
+  </g>
+  <g fill="#d9b85c">
+    <path d="M248 250c-18-12-28-36-24-62 18 6 30 20 30 36v26h-6z"/>
+    <path d="M264 250c18-12 28-36 24-62-18 6-30 20-30 36v26h6z"/>
+    <path d="M152 172c6-8 16-14 26-16-2-18-10-34-22-44-20 12-32 32-34 56 10 0 22 2 30 4z"/>
+    <path d="M360 172c-6-8-16-14-26-16 2-18 10-34 22-44 20 12 32 32 34 56-10 0-22 2-30 4z"/>
+    <circle cx="144" cy="172" r="8"/>
+    <circle cx="368" cy="172" r="8"/>
+    <path d="M256 396c-10-8-16-18-18-30-10 4-20 12-28 22 14 14 32 22 46 24v-16z"/>
+    <path d="M256 396c10-8 16-18 18-30 10 4 20 12 28 22-14 14-32 22-46 24v-16z"/>
+  </g>
+</svg>
