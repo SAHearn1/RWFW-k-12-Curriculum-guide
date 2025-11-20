@@ -82,7 +82,7 @@ export default async function Grade35() {
                 </div>
                 <div className="border-l-4 border-emerald-600 pl-4">
                   <p className="font-mono text-sm text-emerald-600 font-bold">5-ESS3-1</p>
-                  <p className="text-gray-700">Obtain and combine information about ways communities use science to protect Earth's resources and environment.</p>
+                  <p className="text-gray-700">Obtain and combine information about ways communities use science to protect Earth’s resources and environment.</p>
                 </div>
               </div>
             </div>
@@ -294,7 +294,7 @@ export default async function Grade35() {
             <h3 className="font-bold text-emerald-900 mb-3">🤖 AI-Powered Lesson Generator</h3>
             <p className="text-gray-700 mb-4">
               Create customized, standards-aligned lesson plans in minutes using our intelligent generator 
-              that incorporates Webb's DOK, Bloom's Taxonomy, and the 5 Rs framework.
+              that incorporates Webb’s DOK, Bloom’s Taxonomy, and the 5 Rs framework.
             </p>
             <a
               href="https://rwfw-lessonplan-generator.app/"

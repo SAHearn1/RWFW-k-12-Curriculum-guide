@@ -58,6 +58,7 @@ export default function SignUp() {
         }
       }
     } catch (error) {
+      console.error("Error during registration", error)
       setError("An error occurred during registration")
     } finally {
       setLoading(false)

@@ -13,7 +13,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Add scroll effect to navigation
-let lastScroll = 0;
 const nav = document.querySelector('nav');
 
 window.addEventListener('scroll', () => {
@@ -25,7 +24,6 @@ window.addEventListener('scroll', () => {
         nav.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
     }
     
-    lastScroll = currentScroll;
 });
 
 // Intersection Observer for fade-in animations
