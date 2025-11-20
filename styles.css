@@ -16,9 +16,13 @@
     --stone-900: #1c1917;
     
     /* Typography */
-    --font-heading: 'Manrope', sans-serif;
-    --font-body: 'Inter', sans-serif;
-    --font-quote: 'Libre Baskerville', serif;
+    --rw-font-sans: 'Inter', sans-serif;
+    --rw-font-serif: 'Libre Baskerville', serif;
+    
+    /* Legacy font names (for backwards compatibility) */
+    --font-heading: var(--rw-font-serif);
+    --font-body: var(--rw-font-sans);
+    --font-quote: var(--rw-font-serif);
 }
 
 * {
@@ -28,28 +32,64 @@
 }
 
 body {
-    font-family: var(--font-body);
+    font-family: var(--rw-font-sans);
     line-height: 1.7;
     color: var(--stone-900);
     background: var(--stone-50);
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
+    font-family: var(--rw-font-serif);
     font-weight: 700;
     line-height: 1.3;
     color: var(--evergreen);
     margin-bottom: 1rem;
+    letter-spacing: 0.02em;
 }
 
-h1 { font-size: 3rem; }
-h2 { font-size: 2.25rem; }
-h3 { font-size: 1.75rem; }
-h4 { font-size: 1.5rem; }
+/* Type Scale (Desktop) */
+h1 { 
+    font-size: 2.5rem;  /* Page Title */
+    font-weight: 700;
+}
+
+h2 { 
+    font-size: 2rem;    /* Section Title */
+    font-weight: 700;
+}
+
+h3 { 
+    font-size: 1.5rem;  /* Subsection */
+    font-weight: 600;
+}
+
+h4 { 
+    font-size: 1.25rem; /* Minor Heading */
+    font-weight: 600;
+}
 
 p {
     margin-bottom: 1.25rem;
     color: var(--stone-600);
+}
+
+/* Typography Utility Classes */
+.body {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.body-sm {
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.btn-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
 }
 
 a {
@@ -457,20 +497,45 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+    /* Mobile Type Scale - reduced by ~0.15-0.25rem */
+    h1 { 
+        font-size: 2.25rem;  /* was 2.5rem, reduced by 0.25rem */
+    }
+    
+    h2 { 
+        font-size: 1.75rem;  /* was 2rem, reduced by 0.25rem */
+    }
+    
+    h3 { 
+        font-size: 1.25rem;  /* was 1.5rem, reduced by 0.25rem */
+    }
+    
+    h4 { 
+        font-size: 1.1rem;   /* was 1.25rem, reduced by 0.15rem */
+    }
+    
+    .body {
+        font-size: 0.9rem;   /* was 1rem, reduced by 0.1rem */
+    }
+    
+    .body-sm {
+        font-size: 0.8rem;   /* was 0.875rem, reduced by 0.075rem */
+    }
+    
+    .btn-label {
+        font-size: 0.85rem;  /* was 0.95rem, reduced by 0.1rem */
+    }
+    
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.25rem;  /* was 3.5rem in original, now matches h1 mobile */
     }
     
     .nav-links {
         display: none;
     }
     
-    h2 {
-        font-size: 2rem;
-    }
-    
     .section-header h2 {
-        font-size: 2.25rem;
+        font-size: 1.75rem;  /* matches h2 mobile size */
     }
     
     .cta-buttons {
