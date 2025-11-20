@@ -19,6 +19,22 @@
     --font-heading: 'Manrope', sans-serif;
     --font-body: 'Inter', sans-serif;
     --font-quote: 'Libre Baskerville', serif;
+    
+    /* RootWork Design System */
+    --rw-color-forest: #084C3A;
+    --rw-color-cream: #FAF8F3;
+    --rw-color-gold: #D4AF37;
+    --rw-color-charcoal: #2D3748;
+    
+    /* Border Radius */
+    --rw-radius-md: 8px;
+    --rw-radius-lg: 12px;
+    
+    /* Shadows */
+    --rw-shadow-soft: 0 2px 8px rgba(8, 76, 58, 0.12);
+    
+    /* Fonts */
+    --rw-font-sans: 'Manrope', sans-serif;
 }
 
 * {
@@ -482,6 +498,85 @@ footer {
         width: 100%;
         max-width: 300px;
     }
+}
+
+/* RootWork Design System Components */
+
+/* 6.1 Buttons */
+.rw-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.6rem;
+    background: var(--rw-color-forest);
+    color: #fff;
+    border-radius: var(--rw-radius-md);
+    border: 1px solid var(--rw-color-forest);
+    box-shadow: var(--rw-shadow-soft);
+    font-family: var(--rw-font-sans);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.rw-btn-primary:hover {
+    background: #0b5d47; /* slightly lighter */
+}
+
+.rw-btn-primary:focus-visible {
+    outline: 2px solid var(--rw-color-gold);
+    outline-offset: 2px;
+}
+
+.rw-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.6rem;
+    background: var(--rw-color-cream);
+    color: var(--rw-color-forest);
+    border-radius: var(--rw-radius-md);
+    border: 1px solid var(--rw-color-forest);
+    font-family: var(--rw-font-sans);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.rw-btn-secondary:hover {
+    background: #f5f1e8;
+}
+
+.rw-btn-secondary:focus-visible {
+    outline: 2px solid var(--rw-color-gold);
+    outline-offset: 2px;
+}
+
+/* 6.2 Cards */
+.rw-card {
+    background: var(--rw-color-cream);
+    border-radius: var(--rw-radius-lg);
+    box-shadow: var(--rw-shadow-soft);
+    padding: 1.5rem;
+    border: 1px solid rgba(8, 76, 58, 0.08);
+}
+
+/* 6.3 Navigation Bar */
+.rw-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--rw-color-cream);
+    border-bottom: 1px solid rgba(8, 76, 58, 0.12);
+    backdrop-filter: blur(12px);
 }
 
 /* Print Styles */
