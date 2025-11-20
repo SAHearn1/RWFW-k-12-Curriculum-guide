@@ -297,7 +297,7 @@ export default async function GradeK2() {
             <h3 className="font-bold text-emerald-900 mb-3">🤖 AI-Powered Lesson Generator</h3>
             <p className="text-gray-700 mb-4">
               Create customized, standards-aligned lesson plans in minutes using our intelligent generator 
-              that incorporates Webb's DOK, Bloom's Taxonomy, and the 5 Rs framework.
+              that incorporates Webb’s DOK, Bloom’s Taxonomy, and the 5 Rs framework.
             </p>
             <a
               href="https://rwfw-lessonplan-generator.app/"

@@ -60,6 +60,7 @@ function SignInForm() {
         router.push("/dashboard")
       }
     } catch (error) {
+      console.error("Error during sign in", error)
       setError("An error occurred during sign in")
     } finally {
       setLoading(false)
@@ -146,7 +147,7 @@ function SignInForm() {
 
         <div className="text-center">
           <p className="text-sm text-gray-600">
-            Don't have an account?{" "}
+            Don’t have an account?{" "}
             <Link href="/auth/signup" className="font-medium text-emerald-600 hover:text-emerald-500">
               Sign up
             </Link>

@@ -249,14 +249,14 @@ export default async function Home() {
               <h4 className="text-lg font-bold mb-4">Contact</h4>
               <p className="text-gray-400">
                 Dr. Shawn Hearn, Ed.D., J.D.<br />
-                Community Exceptional Children's Services<br />
+                Community Exceptional Children’s Services<br />
                 hearn.sa@gmail.com<br />
                 Savannah, Georgia
               </p>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-            <p>&copy; 2025 Dr. Shawn Hearn / Community Exceptional Children's Services. All rights reserved.</p>
+            <p>&copy; 2025 Dr. Shawn Hearn / Community Exceptional Children’s Services. All rights reserved.</p>
           </div>
         </div>
       </footer>
