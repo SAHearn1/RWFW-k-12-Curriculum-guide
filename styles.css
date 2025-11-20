@@ -6,6 +6,11 @@
     --gold-leaf: #D4C862;
     --evergreen: #082A19;
     
+    /* RootWork Brand Colors (Brand Guide) */
+    --rw-color-cream: #f5f5f4;
+    --rw-color-gold: #D4C862;
+    --rw-color-forest: #065F46;
+    
     /* Extended Palette */
     --emerald-light: #10b981;
     --emerald-dark: #064e3b;
@@ -90,8 +95,9 @@ nav {
 }
 
 .logo-icon {
-    width: 50px;
-    height: 50px;
+    /* Desktop sizing: 48-64px diameter (using 56px as middle) */
+    width: 56px;
+    height: 56px;
     background: var(--emerald);
     border-radius: 50%;
     display: flex;
@@ -99,6 +105,16 @@ nav {
     justify-content: center;
     color: white;
     font-size: 1.75rem;
+    /* Clear space: ½ diameter (28px) on all sides */
+    margin: 28px;
+    flex-shrink: 0;
+}
+
+.logo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
 }
 
 .nav-links {
@@ -455,6 +471,77 @@ footer {
     color: rgba(255,255,255,0.7);
 }
 
+/* 5Rs Framework Component */
+.rw-5rs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.rw-5r {
+    background: var(--rw-color-cream);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.rw-5r:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.rw-5r.active,
+.rw-5r.highlighted {
+    background: var(--rw-color-forest);
+    color: var(--rw-color-cream);
+}
+
+.rw-5r-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--rw-color-gold);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--rw-color-forest);
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.rw-5r.active .rw-5r-icon,
+.rw-5r.highlighted .rw-5r-icon {
+    background: var(--rw-color-cream);
+    color: var(--rw-color-forest);
+}
+
+.rw-5r-text h4 {
+    color: var(--evergreen);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.rw-5r.active .rw-5r-text h4,
+.rw-5r.highlighted .rw-5r-text h4 {
+    color: var(--rw-color-cream);
+}
+
+.rw-5r-text p {
+    color: var(--stone-600);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.rw-5r.active .rw-5r-text p,
+.rw-5r.highlighted .rw-5r-text p {
+    color: var(--rw-color-cream);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .hero h1 {
@@ -463,6 +550,15 @@ footer {
     
     .nav-links {
         display: none;
+    }
+    
+    /* Mobile logo sizing: 40-48px diameter (using 44px) */
+    .logo-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.5rem;
+        /* Clear space: ½ diameter (22px) on all sides */
+        margin: 22px;
     }
     
     h2 {
@@ -481,6 +577,10 @@ footer {
     .btn {
         width: 100%;
         max-width: 300px;
+    }
+    
+    .rw-5rs {
+        grid-template-columns: 1fr;
     }
 }
 
