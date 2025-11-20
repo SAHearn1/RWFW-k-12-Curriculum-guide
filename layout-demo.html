@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RootWork Framework - Layout & Grid System Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Demo-specific styles */
+        .demo-section {
+            margin: var(--space-12) 0;
+        }
+        .demo-box {
+            background: var(--stone-200);
+            padding: var(--space-4);
+            border-radius: 8px;
+            text-align: center;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .demo-header {
+            background: var(--emerald);
+            color: white;
+            padding: var(--space-8);
+            text-align: center;
+            margin-bottom: var(--space-12);
+        }
+        .demo-header h1 {
+            color: white;
+        }
+        .spacing-demo {
+            background: var(--stone-100);
+            padding: var(--space-6);
+            border-radius: 8px;
+            margin-bottom: var(--space-4);
+        }
+        .spacing-box {
+            background: var(--emerald-light);
+            color: white;
+            display: inline-block;
+            margin: var(--space-2);
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-header">
+        <h1>Layout & Grid System Demo</h1>
+        <p>RootWork Framework Design System</p>
+    </div>
+
+    <!-- Container Demo -->
+    <section class="demo-section">
+        <div class="rw-container">
+            <h2>RW Container</h2>
+            <p>The <code>.rw-container</code> class provides a max-width of 1200px with responsive margins:</p>
+            <ul>
+                <li>Mobile: 1.5rem vertical, 0.75rem horizontal padding</li>
+                <li>Desktop (768px+): 1.5rem vertical, 2rem horizontal padding</li>
+            </ul>
+            <div class="demo-box">
+                <p>This content is inside an .rw-container</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12-Column Grid Demo -->
+    <section class="demo-section">
+        <div class="rw-container">
+            <h2>12-Column Grid System</h2>
+            <p>Use <code>.rw-grid</code> for the container and column classes like <code>.rw-col-4</code> for spanning columns:</p>
+            
+            <h3 style="margin-top: var(--space-8);">Full Width (12 columns)</h3>
+            <div class="rw-grid">
+                <div class="rw-col-12">
+                    <div class="demo-box">12 columns</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: var(--space-8);">Two Columns (6 + 6)</h3>
+            <div class="rw-grid">
+                <div class="rw-col-6">
+                    <div class="demo-box">6 columns</div>
+                </div>
+                <div class="rw-col-6">
+                    <div class="demo-box">6 columns</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: var(--space-8);">Three Columns (4 + 4 + 4)</h3>
+            <div class="rw-grid">
+                <div class="rw-col-4">
+                    <div class="demo-box">4 columns</div>
+                </div>
+                <div class="rw-col-4">
+                    <div class="demo-box">4 columns</div>
+                </div>
+                <div class="rw-col-4">
+                    <div class="demo-box">4 columns</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: var(--space-8);">Four Columns (3 + 3 + 3 + 3)</h3>
+            <div class="rw-grid">
+                <div class="rw-col-3">
+                    <div class="demo-box">3 columns</div>
+                </div>
+                <div class="rw-col-3">
+                    <div class="demo-box">3 columns</div>
+                </div>
+                <div class="rw-col-3">
+                    <div class="demo-box">3 columns</div>
+                </div>
+                <div class="rw-col-3">
+                    <div class="demo-box">3 columns</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: var(--space-8);">Mixed Layout (8 + 4)</h3>
+            <div class="rw-grid">
+                <div class="rw-col-8">
+                    <div class="demo-box">8 columns (main content)</div>
+                </div>
+                <div class="rw-col-4">
+                    <div class="demo-box">4 columns (sidebar)</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: var(--space-8);">Asymmetric Layout (3 + 6 + 3)</h3>
+            <div class="rw-grid">
+                <div class="rw-col-3">
+                    <div class="demo-box">3 columns</div>
+                </div>
+                <div class="rw-col-6">
+                    <div class="demo-box">6 columns</div>
+                </div>
+                <div class="rw-col-3">
+                    <div class="demo-box">3 columns</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spacing Scale Demo -->
+    <section class="demo-section" style="background: var(--stone-100); padding: var(--space-12) 0;">
+        <div class="rw-container">
+            <h2>Spacing Scale (Multiples of 4)</h2>
+            <p>Consistent spacing tokens based on a 4px scale:</p>
+            
+            <div class="spacing-demo">
+                <h4>--space-1 (0.25rem / 4px)</h4>
+                <div class="spacing-box" style="padding: var(--space-1);">Tight icon gaps</div>
+            </div>
+
+            <div class="spacing-demo">
+                <h4>--space-2 (0.5rem / 8px)</h4>
+                <div class="spacing-box" style="padding: var(--space-2);">Badges, label spacing</div>
+            </div>
+
+            <div class="spacing-demo">
+                <h4>--space-3 (0.75rem / 12px)</h4>
+                <div class="spacing-box" style="padding: var(--space-3);">Inside small buttons</div>
+            </div>
+
+            <div class="spacing-demo">
+                <h4>--space-4 (1rem / 16px)</h4>
+                <div class="spacing-box" style="padding: var(--space-4);">Basic padding</div>
+            </div>
+
+            <div class="spacing-demo">
+                <h4>--space-6 (1.5rem / 24px)</h4>
+                <div class="spacing-box" style="padding: var(--space-6);">Card padding, section gaps</div>
+            </div>
+
+            <div class="spacing-demo">
+                <h4>--space-8 (2rem / 32px)</h4>
+                <div class="spacing-box" style="padding: var(--space-8);">Vertical section spacing</div>
+            </div>
+
+            <div class="spacing-demo">
+                <h4>--space-12 (3rem / 48px)</h4>
+                <div class="spacing-box" style="padding: var(--space-12);">Hero top/bottom padding</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Usage Examples -->
+    <section class="demo-section">
+        <div class="rw-container">
+            <h2>Usage Examples</h2>
+            
+            <h3 style="margin-top: var(--space-8);">HTML Structure</h3>
+            <pre style="background: var(--stone-900); color: white; padding: var(--space-4); border-radius: 8px; overflow-x: auto;"><code>&lt;!-- Container --&gt;
+&lt;div class="rw-container"&gt;
+  &lt;h1&gt;Page Content&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;!-- Grid Layout --&gt;
+&lt;div class="rw-container"&gt;
+  &lt;div class="rw-grid"&gt;
+    &lt;div class="rw-col-4"&gt;Column 1&lt;/div&gt;
+    &lt;div class="rw-col-4"&gt;Column 2&lt;/div&gt;
+    &lt;div class="rw-col-4"&gt;Column 3&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Using Spacing Tokens --&gt;
+&lt;div style="padding: var(--space-6); margin-bottom: var(--space-8);"&gt;
+  Content with consistent spacing
+&lt;/div&gt;</code></pre>
+
+            <h3 style="margin-top: var(--space-8);">Available Column Classes</h3>
+            <ul>
+                <li><code>.rw-col-1</code> through <code>.rw-col-12</code> - Span 1-12 columns on desktop</li>
+                <li>On mobile (< 768px), all columns automatically span full width (12 columns)</li>
+                <li>Grid gap is set to <code>var(--space-4)</code> (1rem / 16px)</li>
+            </ul>
+
+            <h3 style="margin-top: var(--space-8);">Spacing Tokens</h3>
+            <ul>
+                <li><code>var(--space-1)</code> - 0.25rem (4px)</li>
+                <li><code>var(--space-2)</code> - 0.5rem (8px)</li>
+                <li><code>var(--space-3)</code> - 0.75rem (12px)</li>
+                <li><code>var(--space-4)</code> - 1rem (16px)</li>
+                <li><code>var(--space-6)</code> - 1.5rem (24px)</li>
+                <li><code>var(--space-8)</code> - 2rem (32px)</li>
+                <li><code>var(--space-12)</code> - 3rem (48px)</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer style="background: var(--evergreen); color: white; text-align: center; padding: var(--space-8);">
+        <p>&copy; 2025 RootWork Framework - Layout & Grid System</p>
+        <p style="margin-top: var(--space-2);"><a href="index.html" style="color: var(--gold-leaf);">← Back to Main Site</a></p>
+    </footer>
+</body>
+</html>

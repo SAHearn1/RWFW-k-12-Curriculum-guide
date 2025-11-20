@@ -19,6 +19,15 @@
     --font-heading: 'Manrope', sans-serif;
     --font-body: 'Inter', sans-serif;
     --font-quote: 'Libre Baskerville', serif;
+    
+    /* Spacing Scale - Multiples of 4 */
+    --space-1: 0.25rem;  /* 4px - Tight icon gaps */
+    --space-2: 0.5rem;   /* 8px - Badges, label spacing */
+    --space-3: 0.75rem;  /* 12px - Inside small buttons */
+    --space-4: 1rem;     /* 16px - Basic padding */
+    --space-6: 1.5rem;   /* 24px - Card padding, section gaps */
+    --space-8: 2rem;     /* 32px - Vertical section spacing */
+    --space-12: 3rem;    /* 48px - Hero top/bottom padding */
 }
 
 * {
@@ -60,6 +69,45 @@ a {
 
 a:hover {
     color: var(--forest-green);
+}
+
+/* Layout & Grid System */
+.rw-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-6) var(--space-4);
+}
+
+@media (min-width: 768px) {
+    .rw-container {
+        padding: var(--space-6) var(--space-8);
+    }
+}
+
+/* 12-Column Grid */
+.rw-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--space-4);
+}
+
+.rw-grid > * {
+    grid-column: span 12;
+}
+
+@media (min-width: 768px) {
+    .rw-col-1 { grid-column: span 1; }
+    .rw-col-2 { grid-column: span 2; }
+    .rw-col-3 { grid-column: span 3; }
+    .rw-col-4 { grid-column: span 4; }
+    .rw-col-5 { grid-column: span 5; }
+    .rw-col-6 { grid-column: span 6; }
+    .rw-col-7 { grid-column: span 7; }
+    .rw-col-8 { grid-column: span 8; }
+    .rw-col-9 { grid-column: span 9; }
+    .rw-col-10 { grid-column: span 10; }
+    .rw-col-11 { grid-column: span 11; }
+    .rw-col-12 { grid-column: span 12; }
 }
 
 /* Navigation */
