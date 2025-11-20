@@ -1,24 +1,48 @@
 :root {
-    /* Brand Colors */
-    --emerald: #047857;
-    --forest-green: #065F46;
-    --amber: #D97706;
-    --gold-leaf: #D4C862;
-    --evergreen: #082A19;
-    
-    /* Extended Palette */
-    --emerald-light: #10b981;
-    --emerald-dark: #064e3b;
-    --stone-50: #fafaf9;
-    --stone-100: #f5f5f4;
-    --stone-200: #e7e5e4;
-    --stone-600: #57534e;
-    --stone-900: #1c1917;
-    
+    /* Primary Brand Colors */
+    --rw-color-forest:   #084c3a;
+    --rw-color-gold:     #c89a2b;
+    --rw-color-cream:    #f5f0e6;
+    --rw-color-charcoal: #222325;
+
+    /* Support / Utility Colors */
+    --rw-color-mist:     #e2ddd3;
+    --rw-color-stone:    #9a9183;
+    --rw-color-success:  #2f7c4a;
+    --rw-color-warning:  #e6a019;
+    --rw-color-error:    #b04a3a;
+    --rw-color-info:     #156f6a;
+
+    /* Border Radius */
+    --rw-radius-lg: 1.25rem;   /* cards */
+    --rw-radius-md: 0.75rem;   /* buttons, inputs */
+    --rw-radius-sm: 0.5rem;    /* pills, tags */
+
+    /* Shadows */
+    --rw-shadow-soft: 0 10px 25px rgba(0, 0, 0, 0.09);
+    --rw-shadow-subtle: 0 4px 12px rgba(0, 0, 0, 0.05);
+
     /* Typography */
-    --font-heading: 'Manrope', sans-serif;
-    --font-body: 'Inter', sans-serif;
-    --font-quote: 'Libre Baskerville', serif;
+    --rw-font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+                    "Segoe UI", sans-serif;
+    --rw-font-serif: "Libre Baskerville", "Georgia", "Times New Roman", serif;
+    
+    /* Legacy color aliases for compatibility */
+    --emerald: var(--rw-color-forest);
+    --forest-green: var(--rw-color-forest);
+    --amber: var(--rw-color-gold);
+    --gold-leaf: var(--rw-color-gold);
+    --evergreen: var(--rw-color-charcoal);
+    --emerald-light: var(--rw-color-success);
+    --emerald-dark: var(--rw-color-forest);
+    --stone-50: var(--rw-color-cream);
+    --stone-100: var(--rw-color-mist);
+    --stone-200: var(--rw-color-mist);
+    --stone-600: var(--rw-color-stone);
+    --stone-900: var(--rw-color-charcoal);
+    --font-heading: var(--rw-font-sans);
+    --font-body: var(--rw-font-sans);
+    --font-quote: var(--rw-font-serif);
 }
 
 * {
@@ -153,7 +177,7 @@ nav {
 
 .btn {
     padding: 1rem 2.5rem;
-    border-radius: 8px;
+    border-radius: var(--rw-radius-md);
     font-weight: 600;
     font-size: 1.1rem;
     cursor: pointer;
@@ -224,21 +248,21 @@ section {
 .feature-card {
     background: white;
     padding: 2.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-radius: var(--rw-radius-lg);
+    box-shadow: var(--rw-shadow-subtle);
     transition: all 0.3s ease;
 }
 
 .feature-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    box-shadow: var(--rw-shadow-soft);
 }
 
 .feature-icon {
     width: 70px;
     height: 70px;
     background: linear-gradient(135deg, var(--emerald-light), var(--emerald));
-    border-radius: 12px;
+    border-radius: var(--rw-radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -292,7 +316,7 @@ section {
 .generator-feature {
     background: rgba(255,255,255,0.1);
     padding: 2rem;
-    border-radius: 10px;
+    border-radius: var(--rw-radius-md);
     backdrop-filter: blur(10px);
 }
 
@@ -323,9 +347,9 @@ section {
 
 .grade-band-card {
     background: white;
-    border-radius: 12px;
+    border-radius: var(--rw-radius-lg);
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: var(--rw-shadow-subtle);
     transition: all 0.3s ease;
     text-decoration: none;
     color: inherit;
@@ -333,7 +357,7 @@ section {
 
 .grade-band-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+    box-shadow: var(--rw-shadow-soft);
 }
 
 .grade-band-header {

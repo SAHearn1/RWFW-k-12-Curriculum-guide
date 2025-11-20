@@ -19,17 +19,54 @@ This is a comprehensive, professional HTML website for the RootWork Framework K-
 
 ## Brand Integration
 
-### Colors
-- **Emerald**: #047857 (primary)
-- **Forest Green**: #065F46 (secondary)
-- **Amber**: #D97706 (CTAs)
-- **Gold Leaf**: #D4C862 (accents)
-- **Evergreen**: #082A19 (headings)
+### Brand Snapshot
+
+**Brand name**: RootWork Framework (RWFW)  
+**Ecosystem**: From Garden to Growth, Living Learning Labs, dual-purpose pedagogy (STEAM + ACEs-informed)  
+**Core feel**: Scholarly, Afro-Indigenous, grounded in nature, calm but powerful, community-centered, anti-gimmicky, professional
+
+### Color Palette
+
+#### Primary Palette
+
+| Role | Name | Hex | CSS Variable |
+|------|------|-----|--------------|
+| Primary | Forest Green | #084c3a | --rw-color-forest |
+| Accent | Metallic Gold | #c89a2b | --rw-color-gold |
+| Light Base | Warm Cream | #f5f0e6 | --rw-color-cream |
+| Dark Base | Charcoal | #222325 | --rw-color-charcoal |
+
+#### Support / Utility Colors
+
+| Role | Name | Hex | CSS Variable |
+|------|------|-----|--------------|
+| Neutral Light | Mist | #e2ddd3 | --rw-color-mist |
+| Neutral Medium | Stone | #9a9183 | --rw-color-stone |
+| Success | Sap Green | #2f7c4a | --rw-color-success |
+| Warning | Amber | #e6a019 | --rw-color-warning |
+| Error | Brick | #b04a3a | --rw-color-error |
+| Info | Deep Teal | #156f6a | --rw-color-info |
+
+#### Design Tokens
+
+- **Border Radius**:
+  - Large (cards): `--rw-radius-lg: 1.25rem`
+  - Medium (buttons, inputs): `--rw-radius-md: 0.75rem`
+  - Small (pills, tags): `--rw-radius-sm: 0.5rem`
+
+- **Shadows**:
+  - Soft: `--rw-shadow-soft: 0 10px 25px rgba(0, 0, 0, 0.09)`
+  - Subtle: `--rw-shadow-subtle: 0 4px 12px rgba(0, 0, 0, 0.05)`
+
+#### Accessibility Guidance
+
+- **Default text on cream**: Use `--rw-color-charcoal`
+- **Text on forest backgrounds**: Use white `#ffffff` or `--rw-color-cream`
+- **Avoid**: Gold text on cream for body copy (insufficient contrast) – keep it for accents, labels, borders
 
 ### Typography
-- **Headings**: Manrope (Google Fonts)
-- **Body**: Inter (Google Fonts)
-- **Quotes**: Libre Baskerville (Google Fonts)
+- **Sans-serif**: Inter (body text, headings)
+- **Serif**: Libre Baskerville (quotes, emphasis)
 
 ## Features
 
