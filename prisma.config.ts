@@ -1,5 +1,5 @@
 import "dotenv/config";
-import { defineConfig, env } from "prisma/config";
+import { defineConfig } from "prisma/config";
 
 export default defineConfig({
   schema: "prisma/schema.prisma",
@@ -8,6 +8,9 @@ export default defineConfig({
   },
   engine: "classic",
   datasource: {
-    url: env("DATABASE_URL"),
+    // Default to a local SQLite database so `prisma generate` can run without
+    // a DATABASE_URL (e.g., during CI or fresh installs). Production
+    // deployments can override this via the DATABASE_URL environment variable.
+    url: process.env.DATABASE_URL ?? "file:./dev.db",
   },
 });
