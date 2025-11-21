@@ -11,132 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    
-    <style>
-        .curriculum-nav {
-            background: var(--stone-100);
-            padding: 1.5rem 0;
-            position: sticky;
-            top: 80px;
-            z-index: 999;
-        }
-        
-        .curriculum-nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            gap: 1rem;
-            overflow-x: auto;
-        }
-        
-        .nav-chip {
-            padding: 0.75rem 1.5rem;
-            background: white;
-            border-radius: 50px;
-            font-weight: 500;
-            white-space: nowrap;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-        
-        .nav-chip:hover {
-            border-color: var(--emerald);
-            background: var(--emerald);
-            color: white;
-        }
-        
-        .nav-chip.active {
-            background: var(--emerald);
-            color: white;
-        }
-        
-        .content-section {
-            padding: 4rem 0;
-            border-bottom: 2px solid var(--stone-200);
-        }
-        
-        .content-section:last-of-type {
-            border-bottom: none;
-        }
-        
-        .standards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        
-        .standard-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--emerald);
-        }
-        
-        .standard-code {
-            font-family: 'Courier New', monospace;
-            color: var(--emerald);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .learning-objective {
-            background: var(--stone-50);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 1rem 0;
-            border-left: 4px solid var(--amber);
-        }
-        
-        .cinco-rs {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        
-        .r-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-        
-        .r-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--emerald), var(--forest-green));
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.75rem;
-            margin-bottom: 1rem;
-        }
-        
-        .generator-cta {
-            background: linear-gradient(135deg, var(--amber), #b45309);
-            padding: 3rem 2rem;
-            border-radius: 16px;
-            text-align: center;
-            margin: 4rem 0;
-            color: white;
-        }
-        
-        .generator-cta h3 {
-            color: white;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-        
-        .generator-cta p {
-            color: rgba(255,255,255,0.95);
-            font-size: 1.15rem;
-            margin-bottom: 2rem;
-        }
-    </style>
 </head>
 <body>
     <nav>
@@ -172,7 +46,7 @@
             <h1>Grades 9-12: Impact & Innovation</h1>
             <p>Professional-level research, sustainability leadership, career pathway development, and community impact through advanced garden-based science.</p>
             <div class="cta-buttons">
-                <a href="https://rwfw-lessonplan-generator.app/" target="_blank" class="btn btn-primary">
+                <a href="https://rwfw-lessonplan-generator.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     <i class="fas fa-magic"></i> Generate 9-12 Lesson
                 </a>
                 <a href="#overview" class="btn btn-secondary">
@@ -397,7 +271,7 @@
         <div class="generator-cta">
             <h3>Ready to Create Your Lesson?</h3>
             <p>Use our AI-powered lesson generator to create standards-aligned, trauma-informed lessons in minutes.</p>
-            <a href="https://rwfw-lessonplan-generator.app/" target="_blank" class="btn btn-secondary">
+            <a href="https://rwfw-lessonplan-generator.app/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                 <i class="fas fa-magic"></i> Generate Lesson Now
             </a>
         </div>
@@ -506,7 +380,7 @@
             <div class="footer-section">
                 <h4>Resources</h4>
                 <ul>
-                    <li><a href="https://rwfw-lessonplan-generator.app/" target="_blank">Lesson Generator</a></li>
+                    <li><a href="https://rwfw-lessonplan-generator.app/" target="_blank" rel="noopener noreferrer">Lesson Generator</a></li>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="index.html#about">About</a></li>
                 </ul>
