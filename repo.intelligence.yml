@@ -1,0 +1,47 @@
+# repo.intelligence.yml — RWFW-k-12-Curriculum-guide
+# Anti-hallucination enforced: unverified fields marked TODO
+# Last updated: 2026-03-08 | Phase C governance install
+
+repo:
+  name: RWFW-k-12-Curriculum-guide
+  owner: SAHearn1
+  tier: 2
+  classification: active-support
+  description: RootWork Framework K-12 Curriculum Guide — trauma-informed, culturally responsive pedagogy resources
+
+stack:
+  type: static-html
+  framework: none
+  language: HTML + CSS
+  build_tool: none
+
+auth:
+  provider: none
+  notes: Public educational resource, no auth
+
+database:
+  primary: none
+
+deployment:
+  platform: "TODO — requires human verification"
+  branch_strategy:
+    production: main
+    governance_install: agent-operating-system-install
+
+ci:
+  platform: GitHub Actions
+  governance_workflow: .github/workflows/agent-governance.yml
+
+entrypoints:
+  app: index.html
+
+critical_env_vars: []
+
+related_repos:
+  - SAHearn1/RWFW-LOS
+  - SAHearn1/rwfw-agent-governance
+  - SAHearn1/Book-1-Rooting-the-framework
+
+governance:
+  hub: SAHearn1/rwfw-agent-governance
+  install_branch: agent-operating-system-install
